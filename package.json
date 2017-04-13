@@ -10,9 +10,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrdck/React-Webpack2-Babel-Starter-Files"
+    "url": "git+https://github.com/mrdck/React-Webpack2-Babel-Starter-Files.git"
   },
-
   "author": "Mateusz Perlak",
   "license": "ISC",
   "dependencies": {
@@ -29,6 +28,9 @@
     "html-webpack-plugin": "^2.28.0",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
-  }
-
+  },
+  "bugs": {
+    "url": "https://github.com/mrdck/React-Webpack2-Babel-Starter-Files/issues"
+  },
+  "homepage": "https://github.com/mrdck/React-Webpack2-Babel-Starter-Files#readme"
 }
