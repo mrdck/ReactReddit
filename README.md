@@ -23,5 +23,7 @@ This starter pack contains :
 
 * React
 * Babel
-* SASS/SCSS
+* React-redux
+* Redux
+* CSS/SASS 
 
