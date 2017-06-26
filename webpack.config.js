@@ -1,16 +1,16 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
-// var webpack = require('webpack');
+const webpack = require('webpack');
 
 
 
 module.exports = {
-    entry: './src/app.js',
-    output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: 'app.bundle.js'
-    },
+    entry: './src/index.js',
+      output: {
+    path: __dirname,
+    filename: './dist/app.bundle.js'
+  },
     module:{
         rules: [
             {
@@ -30,7 +30,7 @@ module.exports = {
     devServer:{
         contentBase: path.join(__dirname, "dist"),
         compress: true,
-        port:5000
+        port: process.env.PORT
     },
     plugins: [new HtmlWebpackPlugin({
          template: './src/index.html'
