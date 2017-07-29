@@ -1,20 +1,26 @@
 import React , { Component } from 'react';
 import style from '../../style/main.scss';
 
+//Components/Containers
+
+import Header from './containers/header';
+import Body from './containers/body';
 class App extends Component{
 
   render(){
     return(
-      <div>
-          <h1>Hello World!</h1>
-          <p>Now you can start coding</p>
-          <p>If you meet any problems please visit <a className="link" href="https://github.com/mrdck/React-Webpack2-Babel-Starter-Files">GitHub Page</a> and post your issue</p>
-          <i className="author">By Mateusz 'mrdck' Perlak</i>
-      </div>
+        <div>
+            <Header />
+            <Body />
+        </div>
     )
+
   }
 
 }
 
 
 export default App
+
+
+

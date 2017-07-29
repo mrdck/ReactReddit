@@ -1,27 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.header{
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #eeeeef;
+}
 
-
-body{
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background:#FFA5A5;
-    margin-top: 30vh;
-    color: #fff;
-    font-size: 1.6rem;
-    }
-
-
-    .link{
-        text-decoration: none;
-        color: #FF4343;
-    }
-
-    .author{
-        font-size: 1.2rem;
-        color: #EEEEEF;
-    }
-
-
-   
+.header>input{
+  margin: 20px;
+  width: 80%;
+  height: 45px;
+  outline: unset;
+  padding: 5px;
+  font-size: 2rem;
+  border:unset;
+  border:2px solid;
+  background: none;
+}
