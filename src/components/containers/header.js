@@ -1,7 +1,7 @@
 import React , { Component } from 'react';
 import { connect } from 'react-redux';
-import {fetchSubreddit} from '../../actions/index';
-import _ from 'lodash';
+import {fetchSubreddit , setSubreddit} from '../../actions/index';
+
 
 //Dumb components
 import Input from '../input';
@@ -9,8 +9,15 @@ import Input from '../input';
 
 
 class Header extends Component{
-    onChangeUpdate = (term) =>{
-            this.props.fetchSubreddit('webdev');
+    componentDidMount(){
+        console.log(this.props)
+    }
+    onChangeUpdate = term =>{
+        this.props.setSubreddit(term)
+    }
+    onSubmitFetch = () => {
+        console.log(this.props)
+        this.props.fetchSubreddit(this.props.currentSubreddit)
     }
 
 
@@ -18,7 +25,8 @@ class Header extends Component{
     render(){
         return(
             <div className="header">
-                <Input onChangeUpdateTerm={(e) => this.onChangeUpdate(e)}/>
+                <Input onSubmitFetchSubreddit = {this.onSubmitFetch} onChangeUpdateTerm={(e) => this.onChangeUpdate(e)}/>
+
             </div>
         )
     }
@@ -29,15 +37,16 @@ class Header extends Component{
 
 const mapDispatchToProps = dispatch =>{
     return {
+        setSubreddit: term => dispatch(setSubreddit(term)),
         fetchSubreddit: term => dispatch(fetchSubreddit(term))
     }
 }
 
 const mapStateToProps = state => {
     return{
-
+        currentSubreddit: state.setSubreddit
     }
 }
 
 
-export default connect(mapDispatchToProps ,mapDispatchToProps)(Header);
+export default connect(mapStateToProps ,mapDispatchToProps)(Header);

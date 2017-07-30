@@ -1,10 +1,12 @@
-.header{
+.header>form{
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #eeeeef;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
-.header>input{
+.header form>input{
   margin: 20px;
   width: 80%;
   height: 45px;
@@ -13,5 +15,19 @@
   font-size: 2rem;
   border:unset;
   border:2px solid;
+  border-radius: 5px;
   background: none;
 }
+
+.btn-styled{
+  height:45px;
+  width: 80px;
+  border:2px solid;
+}
+
+
+.media{
+  margin: 25px;
+  border: 1px solid;
+}
+
