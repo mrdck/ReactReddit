@@ -3,9 +3,10 @@ import React from 'react';
 
 
 const Input = props => {
+    console.log(props)
     return(
 
-        <input />
+        <input onChange={(e) => props.onChangeUpdateTerm(e.target.value)} />
 
     )
 }
