@@ -1,4 +1,7 @@
 import {
+    COUNTER,
+    FETCH_MORE_POSTS,
+    FETCH_MORE_POSTS_FULLFILLED,
     FETCH_POST,
     FETCH_POST_FULLFILLED,
     FETCH_SUBREDDIT_REJECTED ,
@@ -25,3 +28,8 @@ export const fetchPost = data => ({type: FETCH_POST , payload: data})
 
 export const fetchPostFullfilled = payload => ({type: FETCH_POST_FULLFILLED , payload})
 
+export const fetchMorePosts = data => ({type: FETCH_MORE_POSTS , payload: data})
+
+export const fetchMorePostsFullfilled = payload => ({type: FETCH_MORE_POSTS_FULLFILLED, payload})
+
+export const counter = payload => ({type:COUNTER,  payload}) //HARDCODED Counter

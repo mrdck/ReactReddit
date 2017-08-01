@@ -11,6 +11,7 @@ import Input from '../input';
 class Header extends Component{
     componentDidMount(){
         this.props.fetchSubreddit('all')
+        this.props.setSubreddit('all')
     }
     onChangeUpdate = term =>{
         this.props.setSubreddit(term)

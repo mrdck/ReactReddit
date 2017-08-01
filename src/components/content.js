@@ -7,7 +7,6 @@ import ImageContent from './imageContent';
 import TweetContent from './tweetContent';
 
 const Content = props => {
-    console.log(props.data)
     const renderBody = () => {
         if(props.data.post_hint === "rich:video"){
             return <VideoContent data={props.data.url}/>

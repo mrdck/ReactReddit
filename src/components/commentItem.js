@@ -5,7 +5,7 @@ const CommentItem = props => {
     const renderReplies = () =>{
         if(props.data.replies && props.data.replies.data.children.length > 0){
             return props.data.replies.data.children.map((e) => {
-                return <CommentReply data={e.data}/>
+                return <CommentReply key={e.data.id} data={e.data}/>
             })
         }else{
             return "";

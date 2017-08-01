@@ -7,12 +7,16 @@ import setSubreddit from './set_subreddit';
 import fetchSubredditReject from './fetch_subreddit_reject';
 import fetchPostEpic from './fetch_post_epic';
 import fetchPost from './fetch_post';
+import fetchMorePostsEpic from './fetch_more_posts_epic';
+import fetchMorePosts from './fetch_more_posts';
+import counter from './counter';
 import 'rxjs';
 
 export const rootEpic = combineEpics(
     fetchSubredditEpic,
     setSubredditEpic,
-    fetchPostEpic
+    fetchPostEpic,
+    fetchMorePostsEpic
 
 );
 
@@ -21,7 +25,9 @@ export const Reducer = combineReducers({
     fetchSubreddit,
     setSubreddit,
     fetchSubredditReject,
-    fetchPost
+    fetchPost,
+    fetchMorePosts,
+    counter
 
 });
 

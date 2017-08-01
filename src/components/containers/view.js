@@ -25,7 +25,6 @@ class View extends Component{
     renderComments = () => {
         if(this.props.post && _.size(this.props.post) > 0){
             return ( <div>
-            <CommentForm/>
             <CommentList data={this.props.post[1].data.children}/>
             </div>)
         }else{

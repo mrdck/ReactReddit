@@ -1,10 +1,10 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 const PostTop = props => {
     return(
         <div className="header post-header">
-            <button className="btn btn-default">Go back</button>
+            <Link to={"/"} className="btn btn-default">Go back</Link>
             <h2>/r/{props.data.r}</h2>
             <h3>Up votes</h3>
         </div>

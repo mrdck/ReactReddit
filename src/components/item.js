@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const Item = props => {
-    console.log(props)
     const checkImg = ()=>{
         if(props.data.thumbnail === 'self') {
             return "https://www.openprocessing.org/assets/thumbnails/visualThumbnail11740.jpg"

@@ -2,7 +2,6 @@ import React from 'react';
 
 
 const LinkContent = props => {
-    console.log(props)
     return(
             <div className="media link-content">
                 <div className="media-left media-link">
