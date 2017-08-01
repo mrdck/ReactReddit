@@ -31,3 +31,59 @@
   border: 1px solid;
 }
 
+
+.comments-section{
+  margin-top: 5vh;
+  border-top: 1px solid #eeeeef;
+}
+
+.comments-section>form{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+
+.comments-section>form>textarea{
+  flex:7;
+  resize: none;
+  outline: none;
+}
+
+.comments-section>form>button{
+  flex:1;
+}
+
+
+
+.comments-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.comment-item{
+  border: 1px solid #DDE4EA;
+  width: 60%;
+  position: relative;
+  background:#F6F7F9;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.comment-username{
+  float:left;
+  clear:both;
+}
+
+.comment-date{
+  float:right;
+}
+
+.comments-votes{
+  border-top: 1px solid #DDE4EA ;
+  padding: 5px;
+}
+
+.comment-item-reply{
+  width: 100%;
+}

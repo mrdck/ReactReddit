@@ -1,13 +1,11 @@
 import React , { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchSubreddit } from '../../actions/index';
+import { fetchSubreddit} from '../../actions/index';
 import ItemsList from '../itemsList';
 
 
 class Body extends Component{
-    componentDidMount(){
-        console.log(this.props)
-    }
+
 
 
     renderList = () => {
@@ -35,13 +33,14 @@ class Body extends Component{
 const mapStateToProps = state => {
     return{
         subreddit: state.fetchSubreddit,
-        error: state.fetchSubredditReject
+        error: state.fetchSubredditReject,
     }
 }
 
 const mapDispatchToProps = dispatch =>{
     return{
-        fetchSubreddit:subreddit => dispatch(fetchSubreddit(subreddit))
+        fetchSubreddit:subreddit => dispatch(fetchSubreddit(subreddit)),
+
     }
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 
 const Item = props => {
     const checkImg = ()=>{
@@ -12,6 +12,7 @@ const Item = props => {
 
 
     return (
+        <Link to={`/${props.data.subreddit}/${props.data.id}`}  >
         <div>
             <div className="media">
                 <div className="media-left">
@@ -25,6 +26,7 @@ const Item = props => {
                 </div>
             </div>
         </div>
+        </Link>
 
 
     )

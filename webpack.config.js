@@ -9,8 +9,9 @@ module.exports = {
     entry: './src/index.js',
       output: {
     path: __dirname,
-    filename: './dist/app.bundle.js'
-  },
+    filename: 'app.bundle.js',
+          publicPath: '/'
+      },
     module:{
         rules: [
             {
@@ -29,8 +30,10 @@ module.exports = {
     },
     devServer:{
         contentBase: path.join(__dirname, "dist"),
+        stats: "errors-only",
         compress: true,
         port: process.env.PORT,
+        historyApiFallback: true,
         headers: {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
