@@ -2,7 +2,6 @@ import React from 'react';
 
 
 const CommentReply = props => {
-    console.log(props)
     return(
         <div className="comment-item comment-item-reply">
             <div className="comment-username">

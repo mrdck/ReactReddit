@@ -4,7 +4,7 @@ import React from 'react';
 const SelfContent = props => {
     console.log(props)
     return(
-        <div>
+        <div className="self -content">
             {props.data}
         </div>
     )

@@ -14,7 +14,7 @@ const Content = props => {
         }else if(props.data.post_hint === "self"){
             return <SelfContent data={props.data.selftext}/>
         }else if(props.data.post_hint === "link"){
-            return <LinkContent />
+            return <LinkContent thumbnail={props.data.thumbnail} url={props.data.url} title={props.data.title}/>
         }else if(props.data.post_hint === "image"){
             return <ImageContent data={props.data.url}/>
         }else if(props.data.domain === "twitter.com"){

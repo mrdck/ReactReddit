@@ -5,6 +5,7 @@ import Content from '../content';
 import {fetchPost} from "../../actions/index";
 import CommentForm from '../commentForm';
 import CommentList from '../commentList'
+import PostTop from '../postTop';
 
 class View extends Component{
 
@@ -35,9 +36,12 @@ class View extends Component{
 
     render(){
         return(
-        <div >
-            <div className="content-section">
-               {this.renderContent()}
+        <div>
+            <PostTop data={this.props.match.params}/>
+            <div className="content-section-container">
+                <div className="content-section">
+                   {this.renderContent()}
+                </div>
             </div>
             <div className="comments-section">
                 {this.renderComments()}

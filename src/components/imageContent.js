@@ -4,7 +4,7 @@ import React from 'react';
 const ImageContent = props => {
     return(
         <div>
-            <img src={props.data} />
+            <img className="img-responsive" src={props.data} />
         </div>
     )
 }

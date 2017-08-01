@@ -1,9 +1,18 @@
+body{
+  background: #F6F3F3;
+}
+
+
+.header{
+  background:#FFFFFF;
+}
+
 .header>form{
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid #eeeeef;
   align-items: center;
   margin-bottom: 25px;
+  border-bottom: 1px solid #CCCCCC;
 }
 
 .header form>input{
@@ -28,29 +37,46 @@
 
 .media{
   margin: 25px;
-  border: 1px solid;
+  background: #FFFFFF;
+  outline: none;
+  border-radius: 5px;
+  height: 100px;
 }
+
+.media-left{
+
+  text-align: center;
+  font-size: 2rem;
+  min-width: 100px !important;
+  max-width: 100px !important;
+  border-right: 1px solid #CCCCCC;
+  padding: 15px;
+  height: 100vh;
+}
+
+.media-right{
+  text-align: center;
+  font-size: 3rem;
+  max-width: 150px !important;
+  min-width: 150px !important;
+  padding-top: 30px;
+}
+
+.media-body{
+  padding-left: 10px;
+  padding-top: 15px;
+}
+
+
+
+a{
+  outline: none;
+}
+
 
 
 .comments-section{
   margin-top: 5vh;
-  border-top: 1px solid #eeeeef;
-}
-
-.comments-section>form{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap:wrap;
-}
-
-.comments-section>form>textarea{
-  flex:7;
-  resize: none;
-  outline: none;
-}
-
-.comments-section>form>button{
-  flex:1;
 }
 
 
@@ -63,9 +89,10 @@
 
 .comment-item{
   border: 1px solid #DDE4EA;
-  width: 60%;
+  border-radius: 5px;
+  width: 80%;
   position: relative;
-  background:#F6F7F9;
+  background: #FFFFFF;
   padding: 10px;
   margin-top: 10px;
 }
@@ -87,3 +114,70 @@
 .comment-item-reply{
   width: 100%;
 }
+
+.post-header{
+  display: inline-flex;
+  border-bottom: 1px solid #CCCCCC;
+  padding: 10px;
+  width: 100%;
+  justify-content: space-between;
+
+}
+.post-header>h2{
+  justify-content: center;
+}
+
+.content-section-container{
+  display:flex;
+  justify-content: center;
+}
+
+.content-section{
+  margin-top: 5vh;
+  background: #fff;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+}
+
+
+.link-content{
+  border: 1px solid #ccc;
+}
+
+.media-link{
+  border-right: unset;
+  height: 100%;
+  min-width: unset !important;
+  max-width: unset !important;
+  border-right: 1px solid #ccc;
+}
+
+.self-content{
+  padding: 10px;
+}
+
+.tweet-container{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.comment-form{
+  display: flex;
+  justify-content: center;
+}
+
+.comment-form>textarea{
+  width:74%;
+  resize: none;
+  height: 10vh;
+  outline: unset;
+  font-size: 2rem;
+}
+.comment-form>button{
+  width: 5%;
+  margin-left: 1%;
+}
+
