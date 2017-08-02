@@ -14,7 +14,7 @@
 * Express.js as backend framework [Link](http://expressjs.com/)
 
 
-## [Live version] (http://heroku/)
+[Live version] (https://redditview-mrdck.herokuapp.com/)
 
 
 
@@ -22,8 +22,16 @@
 ## Get started
 
 ```
-  npm start // - to start RedditViewer in development mode
+  npm dev // - to start RedditViewer in development mode
 ```
+
+```
+ npm start // - to start ReddViewer served on express.js server
+ 
+```
+
+
+
 
 
 
