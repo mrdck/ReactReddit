@@ -11,6 +11,7 @@
 * RxJS [Link](http://reactivex.io/rxjs/)
 * Webpack 2 [Link](https://webpack.js.org/)
 * Lodash [Link](https://lodash.com/)
+* Express.js as backend framework [Link](http://expressjs.com/)
 
 
 ## [Live version] (http://heroku/)
