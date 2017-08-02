@@ -7,7 +7,7 @@
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "production": "webpack -p",
     "test": "jest --coverage",
-    "start" : "node server"
+    "start" : "node server.js"
   },
   "repository": {
     "type": "git",
