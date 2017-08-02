@@ -4,9 +4,10 @@
   "description": "Simple setup for react",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "production": "webpack -p",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "start" : "node server"
   },
   "repository": {
     "type": "git",
