@@ -1,13 +1,15 @@
 import {
+    COMMENT_BODY,
+    ADD_COMMENT,
     COUNTER,
     FETCH_MORE_POSTS,
     FETCH_MORE_POSTS_FULLFILLED,
     FETCH_POST,
     FETCH_POST_FULLFILLED,
-    FETCH_SUBREDDIT_REJECTED ,
-    SET_SUBREDDIT ,
-    FETCH_SUBREDDIT ,
-    FETCH_SUBREDDIT_FULLFILLED ,
+    FETCH_SUBREDDIT_REJECTED,
+    SET_SUBREDDIT,
+    FETCH_SUBREDDIT,
+    FETCH_SUBREDDIT_FULLFILLED,
     SET_SUBREDDIT_FULLFILED
 } from './types';
 
@@ -33,3 +35,7 @@ export const fetchMorePosts = data => ({type: FETCH_MORE_POSTS , payload: data})
 export const fetchMorePostsFullfilled = payload => ({type: FETCH_MORE_POSTS_FULLFILLED, payload})
 
 export const counter = payload => ({type:COUNTER,  payload}) //HARDCODED Counter
+
+export const addComment = payload => ({type: ADD_COMMENT , payload}) //HARDCODED COMMENT ENDPOINT
+
+export const setCommentBody = payload => ({type: COMMENT_BODY , payload})

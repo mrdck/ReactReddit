@@ -10,7 +10,7 @@ const CommentList = props => {
     }
 
     return(<div>
-            <CommentForm />
+            <CommentForm onChangeSetCommentBody={e => props.onChangeSetBody(e)} commentBody={props.commentBody} onSubmitAddPost = {(e) => props.onClickAddComment(e)}/>
 
         <div className="comments-container">
             {props.data.map(renderComment)}

@@ -11,6 +11,7 @@ const fetchSubredditEpic = action$ =>
     action$.ofType(FETCH_SUBREDDIT)
         .mergeMap(action =>
             ajax.getJSON(`https://www.reddit.com/r/${action.payload}.json` )
+                .delay(1000)
                 .map(response => fetchSubredditFullfilled(response))
                 .catch(error => Observable.of(
                     fetchSubredditReject(error.xhr.response)

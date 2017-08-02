@@ -1,3 +1,4 @@
+import 'rxjs';
 import { combineReducers } from 'redux';
 import { combineEpics } from 'redux-observable';
 import fetchSubreddit from './fetch_subreddit';
@@ -10,7 +11,9 @@ import fetchPost from './fetch_post';
 import fetchMorePostsEpic from './fetch_more_posts_epic';
 import fetchMorePosts from './fetch_more_posts';
 import counter from './counter';
-import 'rxjs';
+import addComment from './add_comment';
+import setCommentBody from './set_comment_body'
+
 
 export const rootEpic = combineEpics(
     fetchSubredditEpic,
@@ -27,7 +30,9 @@ export const Reducer = combineReducers({
     fetchSubredditReject,
     fetchPost,
     fetchMorePosts,
-    counter
+    counter,
+    addComment,
+    setCommentBody
 
 });
 

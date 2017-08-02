@@ -187,3 +187,32 @@ a{
   margin: 10px;
 }
 
+
+.loader-container{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-top: 40vh;
+}
+
+@keyframes loader{
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+
+span{
+  display:block;
+  border: 1px solid;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px;
+  animation: loader 0.4s alternate infinite ease-in-out;
+}
+
+span:nth-child(odd){
+  animation-delay: 0.4s;
+}

@@ -2,10 +2,10 @@ import React , { Component } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import Content from '../content';
-import {fetchPost} from "../../actions/index";
-import CommentForm from '../commentForm';
+import {fetchPost , addComment ,setCommentBody} from "../../actions/index";
 import CommentList from '../commentList'
 import PostTop from '../postTop';
+import Loader from '../loader'
 
 class View extends Component{
 
@@ -17,15 +17,26 @@ class View extends Component{
         if(this.props.post && _.size(this.props.post) > 0){
             return <Content data={this.props.post[0].data.children[0].data}/>
         }else{
-            return <img src="https://redux-observable.js.org/logo/logo-small.gif" />
+            return <Loader />
         }
     }
 
+    handleAddComment = e => {
+        this.props.addComment(e)
+        setTimeout(() => {
+            this.props.post[1].data.children.unshift(this.props.newComment)
+            console.log(this.props.newComment)
+            console.log(this.props.post[1].data.children)
+            this.forceUpdate()
+        }, 300)
+
+
+    }
 
     renderComments = () => {
         if(this.props.post && _.size(this.props.post) > 0){
             return ( <div>
-            <CommentList data={this.props.post[1].data.children}/>
+            <CommentList onChangeSetBody={(e) => this.props.setCommentBody(e)} commentBody={this.props.commentBody} onClickAddComment = {(e) => this.handleAddComment(e)} newest_comment={this.props.newComment} data={this.props.post[1].data.children}/>
             </div>)
         }else{
             return " "
@@ -53,13 +64,19 @@ class View extends Component{
 
 const mapDispatchToProps = dispatch => {
     return{
-        fetchPost: data => dispatch(fetchPost(data))
+        fetchPost: data => dispatch(fetchPost(data)),
+        addComment: comment => dispatch(addComment(comment)),
+        setCommentBody: body => dispatch(setCommentBody(body))
+
     }
 }
 
 const mapStateToProps = state => {
     return{
-        post: state.fetchPost
+        post: state.fetchPost,
+        newComment : state.addComment,
+        commentBody: state.setCommentBody,
+
     }
 }
 
