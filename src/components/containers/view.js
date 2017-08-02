@@ -25,8 +25,6 @@ class View extends Component{
         this.props.addComment(e)
         setTimeout(() => {
             this.props.post[1].data.children.unshift(this.props.newComment)
-            console.log(this.props.newComment)
-            console.log(this.props.post[1].data.children)
             this.forceUpdate()
         }, 300)
 

@@ -37,7 +37,11 @@ class Body extends Component{
         }else if (this.props.error === null){
             return 'error'
         }else{
-            return <Loader />
+            return (
+            <div className="body-loader-container">
+                <Loader />
+            </div>
+            )
         }
     }
 

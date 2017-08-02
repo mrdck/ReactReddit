@@ -3,7 +3,6 @@ import {FETCH_POST_FULLFILLED} from "../actions/types"
 export default (state = {}, action) => {
     switch (action.type) {
         case FETCH_POST_FULLFILLED:
-            console.log(action);
             return action.payload
 
         default:
