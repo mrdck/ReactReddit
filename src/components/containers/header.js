@@ -17,7 +17,6 @@ class Header extends Component{
         this.props.setSubreddit(term)
     }
     onSubmitFetch = () => {
-        console.log(this.props)
         this.props.fetchSubreddit(this.props.currentSubreddit)
     }
 
@@ -45,7 +44,9 @@ const mapDispatchToProps = dispatch =>{
 
 const mapStateToProps = state => {
     return{
-        currentSubreddit: state.setSubreddit
+        currentSubreddit: state.setSubreddit,
+        subreddit: state.fetchSubreddit,
+
     }
 }
 

@@ -27,7 +27,7 @@ class Body extends Component{
     }
 
     renderList = () => {
-        if(this.props.subreddit.length > 0){
+        if(this.props.subreddit && this.props.subreddit.length > 0){
             return ( <div><ItemsList list={this.props.subreddit}/>
                 <div className="btn-wrapper">
                     <button className="btn btn-lg btn-default" onClick={this.loadMore}>Load more</button>
