@@ -31,6 +31,9 @@
 ```
 
 
+## CORS
+
+In case of "Access-Control-Allow-Origin" Error you need to use CORS plugin - [Link](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi)
 
 
 
